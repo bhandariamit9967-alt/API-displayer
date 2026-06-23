@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debate Partner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app-container">
+    <header>
+        <h1>Debate Partner</h1>
+        <p>Local Context Engine</p>
+    </header>
+    
+    <div class="drop-zone" id="dropZone">
+        Drag & Drop folder here (or click to pick)
+    </div>
+    <input type="file" id="fileInput" webkitdirectory directory multiple style="display: none;">
+
+    <div class="input-group">
+        <label for="thesisInput">Thesis to challenge</label>
+        <input type="text" id="thesisInput" placeholder="Paste a statement to scan against...">
+        <button id="searchBtn">Scan Contradictions</button>
+    </div>
+
+    <div id="status" class="status">No source directory mounted.</div>
+    
+    <div id="resultsWrapper"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

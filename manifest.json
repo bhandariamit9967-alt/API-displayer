@@ -1,41 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "FigmaRoast – Fake Client Feedback",
-  "version": "1.0.0",
-  "description": "Generate hilariously realistic fake client feedback on your Figma designs. 'Can you make the logo bigger?'",
-  "permissions": [
-    "storage",
-    "activeTab",
-    "scripting"
-  ],
-  "host_permissions": [
-    "https://www.figma.com/*"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "https://www.figma.com/*"
-      ],
-      "js": [
-        "src/content.js"
-      ],
-      "css": [
-        "src/popup.css"
-      ],
-      "run_at": "document_idle"
-    }
-  ],
+  "name": "Debate Partner",
+  "version": "1.0",
+  "description": "Scan local markdown folders for contradictions directly from your browser.",
   "action": {
-    "default_popup": "src/popup.html",
-    "default_icon": {
-      "16": "src/figma.png",
-      "48": "src/figma.png",
-      "128": "src/figma.png"
-    }
+    "default_popup": "popup.html",
+    "default_title": "Open Debate Partner"
   },
-  "icons": {
-    "16": "src/figma.png",
-    "48": "src/figma.png",
-    "128": "src/figma.png"
-  }
+  "permissions": []
 }
