@@ -1,0 +1,70 @@
+{
+  "name": "debate-partner",
+  "displayName": "Debate Partner",
+  "description": "An AI-powered debate partner — pick a topic, choose your position, set the difficulty, and argue it out round by round with scoring and history.",
+  "version": "1.0.0",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "debate",
+    "ai",
+    "groq",
+    "argument",
+    "practice"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "debatePartner.open",
+        "title": "Debate Partner: Open Panel",
+        "icon": "$(comment-discussion)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "debatePartner.open",
+        "key": "ctrl+shift+d",
+        "mac": "cmd+shift+d",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "debatePartner.open",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Debate Partner",
+      "properties": {
+        "debatePartner.groqApiKey": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Enter your Groq API key to connect to Llama via Groq."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/vscode": "^1.125.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "groq-sdk": "^1.3.0"
+  }
+}
