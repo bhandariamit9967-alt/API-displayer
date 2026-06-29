@@ -1,1 +1,0 @@
-Artificial intelligence will completely automate all human programming jobs by next year because language models are developing exponentially.
